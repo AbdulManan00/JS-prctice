@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: relative; /* Ensure positioning of children */
+      }
+      
+      .dot {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      
+      .stationary {
+        background-color: red; /* Change color of stationary dot */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .moving {
+        background-color: blue; /* Change color of moving dot */
+        animation: moveAroundCenter 5s linear infinite;
+      }
+      
+      @keyframes moveAroundCenter {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg) translateY(-40px) translateX(0px);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg) translateY(-40px) translateX(0px);
+        }
+      }
+      
+      
+
+</style>
+<body>
+    <div class="container">
+        <div class="dot stationary"></div>
+        <div class="dot moving"></div>
+      </div>
+      
+      </div>
+      
+      
+</body>
+</html>
