@@ -11,7 +11,6 @@
 			.btn {
 				display: flex;
 				justify-content: center;
-				flex-wrap: wrap;
 				width: auto;
 				height: 100px;
 				margin: 0 auto;
@@ -34,16 +33,159 @@
 			span:nth-child(4) {
 				background-color: rgb(0, 4, 255);
 			}
+			.center {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			h2 {
+				text-align: center;
+				margin-top: 70px;
+				color: red;
+			}
+			#clock {
+				width: 180px;
+				background-color: orangered;
+				font-size: 30px;
+				border-radius: 10px;
+				padding: 23px 10px;
+				text-align: center;
+			}
+			.hidden-p {
+				display: none;
+			}
+			.hidden-p.show-p {
+				display: block;
+			}
+			#animation-btn {
+				display: flex;
+				justify-content: center;
+				width: auto;
+				margin: 0 auto;
+				background-color: black;
+				color: #fff;
+				transition: 0.5s;
+			}
+			#animation-btn:hover {
+				background-color: #fff;
+				color: black;
+			}
+			#modal {
+				position: absolute;
+				top: 150%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				height: 100px;
+				width: 200px;
+				background-color: #000000;
+				color: white;
+				text-align: center;
+				border-radius: 5px;
+			}
+			#close-btn {
+				cursor: pointer;
+				color: red;
+			}
+			.setChange {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.startContainer{
+				display: flex;
+				column-gap: 5px;
+				margin-bottom: 10px;
+			}
+			.keyDown{
+				display: flex;
+				justify-content: center;
+				margin-top: 15px;
+				font-size: 20px;
+				font-weight: bolder;
+				color: rgb(62, 84, 18);
+
+			}
+			.keyColor tr td th{
+			}
+			.before::after {
+				content: 'hello friend';
+			}
+			.before::before {
+				content: 'Manan ';
+			}
+			
+			
 		</style>
 	</head>
 	<body>
+		<p class="before">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente consectetur impedit provident modi nostrum voluptate expedita porro, minus temporibus dolores corrupti.</p>
 		<h1>Color Changer</h1>
 		<div class="btn">
-            <span class="btn1" id="white"></span>
+			<span class="btn1" id="white"></span>
 			<span class="btn1" id="orange"></span>
-            <span class="btn1" id="yellow"></span>
-            <span class="btn1" id="blue"></span>
+			<span class="btn1" id="yellow"></span>
+			<span class="btn1" id="blue"></span>
+		</div>
+		<div class="center">
+			<h2>Time</h2>
+			<div id="clock"></div>
+		</div>
+		<div class="center">
+			<h2>Hidden Content</h2>
+			<p class="hidden-p">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint unde magni
+				accusamus. Dignissimos voluptatibus dolorum omnis id? Repudiandae ut
+				delectus odio. Reprehenderit ullam deleniti iure Lorem ipsum dolor sit
+				amet, consectetur adipisicing elit. Fugiat sed dolorem necessitatibus
+				facilis voluptas reiciendis officiis, tempora accusamus temporibus
+				recusandae rem repellendus eaque dolor iure amet voluptatum omnis
+				obcaecati corrupti.
+			</p>
+			<button type="" class="hide-button">Show</button>
+		</div>
+		<!-- <div class="center">
+            <form class="form">
+                <label for="guessField" id="guess">Guess a Number</label>
+                <input type="text" name="" id="guessField" class="guessField">
+                <input type="submit" name="" id="guessSub" class="guessSub" value="Guess">
+            </form>
+            <div class="result">
+                <p>Previous Guess<span class="guesses"></span></p>
+            </div>
+
+        </div> -->
+		<ul id="parent-1">
+			<li id="child-1">2</li>
+			<li id="child-3">3</li>
+			<li id="child-4">4</li>
+			<li id="child-5">5</li>
+		</ul>
+		<button id="animation-btn">
+			<p>Animation</p>
+		</button>
+		<!-- <div id="modal-container">
+			<div id="modal">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+					quaerat.
+				</p>
+				<div id="close-btn">X</div>
+			</div>
+		</div> -->
+		<div class="setChange">
+			<h4>Change Color Every second</h4>
+			<div class="startContainer">
+				<button class="setStartBtn">Start</button>
+				<button class="setStopBtn">Stop</button>
+			</div>
+		</div>
+		<div class="keyDown">
+			<div class="keyColor">
+				<div class="key">Press Any Key</div>
+
+			</div>
 		</div>
 	</body>
-	<script src="colorChanger.js"></script>
+	<script src="colorChaner.js"></script>
 </html>
