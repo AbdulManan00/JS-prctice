@@ -92,37 +92,60 @@
 				justify-content: center;
 				align-items: center;
 			}
-			.startContainer{
+			.startContainer {
 				display: flex;
 				column-gap: 5px;
 				margin-bottom: 10px;
 			}
-			.keyDown{
+			.keyDown {
 				display: flex;
 				justify-content: center;
 				margin-top: 15px;
 				font-size: 20px;
 				font-weight: bolder;
 				color: rgb(62, 84, 18);
+			}
 
-			}
-			.keyColor tr td th{
-			}
 			.before::after {
-				content: 'hello friend';
+				content: "hello friend";
 			}
 			.before::before {
-				content: 'Manan ';
+				content: "Manan ";
 			}
-			
-			
+			label {
+				display: block;
+				margin-bottom: 10px;
+			}
+			input {
+				width: 100%;
+				padding: 8px;
+				margin-bottom: 20px;
+				box-sizing: border-box;
+			}
+			button {
+				padding: 10px 20px;
+				background-color: #4caf50;
+				color: white;
+				border: none;
+				cursor: pointer;
+			}
+			button:hover {
+				background-color: #45a049;
+			}
+			.error {
+				color: red;
+			}
 		</style>
 	</head>
 	<body>
-		<p class="before">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sapiente consectetur impedit provident modi nostrum voluptate expedita porro, minus temporibus dolores corrupti.</p>
+		<p class="before">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+			sapiente consectetur impedit provident modi nostrum voluptate expedita
+			porro, minus temporibus dolores corrupti.
+		</p>
 		<h1>Color Changer</h1>
 		<div class="btn">
-			<span class="btn1" id="white"></span>
+			<span title="White Color" class="btn1" id="white"></span>
 			<span class="btn1" id="orange"></span>
 			<span class="btn1" id="yellow"></span>
 			<span class="btn1" id="blue"></span>
@@ -183,9 +206,33 @@
 		<div class="keyDown">
 			<div class="keyColor">
 				<div class="key">Press Any Key</div>
-
 			</div>
 		</div>
+		<h2>Registration Form</h2>
+		<small id="error" class="error"></small>
+		<form
+			id="registrationForm"
+			action="dom.html"
+			method="post"
+			onsubmit="return validateForm()">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" />
+
+			<label for="phone">Phone Number:</label>
+			<input type="tel" id="phone" name="phone"  />
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password"  />
+
+			<label for="confirm_password">Confirm Password:</label>
+			<input
+				type="password"
+				id="confirm_password"
+				name="confirm_password"
+				 />
+
+			<button type="submit">Submit</button>
+		</form>
 	</body>
 	<script src="colorChaner.js"></script>
 </html>
