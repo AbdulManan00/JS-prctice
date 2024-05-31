@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    background-color: rgb(254, 244, 223);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.clipped-container {
+    background-color: #ff6347; /* A more visually appealing red-orange */
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    padding: 40px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    transition: clip-path 2.5s ease-in-out, background-color 4.5s ease-in-out; /* Smooth transition for both */
+}
+
+.clipped-container:hover {
+    background-color: red; /* A more appealing orange */
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+}
